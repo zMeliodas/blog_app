@@ -81,7 +81,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
 
             Padding(
-              padding: EdgeInsetsGeometry.only(left: 36, right: 36, top: 24),
+              padding: EdgeInsetsGeometry.only(left: 24, right: 24, top: 24),
               child: Form(
                 key: _profileFormKey,
                 child: Column(

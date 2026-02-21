@@ -193,7 +193,7 @@ class _BlogsPageState extends State<BlogsPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          print("HAHAHA");
+          Navigator.pushNamed(context, '/addBlog');
         },
       ),
     );

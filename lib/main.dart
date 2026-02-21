@@ -1,6 +1,8 @@
 import 'package:blog_app/features/authentication/presentation/login_page.dart';
 import 'package:blog_app/features/authentication/presentation/register_page.dart';
+import 'package:blog_app/features/blogs/presentation/add_blog.dart';
 import 'package:blog_app/features/blogs/presentation/blog_page.dart';
+import 'package:blog_app/features/blogs/presentation/edit.blog.dart';
 import 'package:blog_app/features/blogs/presentation/view_blog.dart';
 import 'package:blog_app/features/profile/presentation/profile_page.dart';
 import 'package:flutter/material.dart';
@@ -71,17 +73,17 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return MaterialApp(
       title: 'Blog App',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      // Set initial route
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
       initialRoute: '/login',
 
-      // Define all your routes here
       routes: {
         '/login': (context) => LoginPage(),
         '/register': (context) => RegisterPage(),
         '/blogs': (context) => BlogsPage(),
         '/profile': (context) => ProfilePage(),
         '/viewBlog': (context) => ViewBlogPage(),
+        '/addBlog': (context) => AddBlogPage(),
+        '/editBlog': (context) => EditBlogPage(),
       },
     );
   }

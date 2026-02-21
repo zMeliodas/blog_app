@@ -33,8 +33,46 @@ class _ViewBlogPageState extends State<ViewBlogPage> {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 12),
-            child: Icon(Icons.more_vert),
+            padding: const EdgeInsets.only(right: 12),
+            child: PopupMenuButton(
+              offset: const Offset(0, 40),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  value: 'edit',
+                  child: const Row(
+                    children: [
+                      Icon(Icons.edit),
+                      SizedBox(width: 8),
+                      Text('Edit'),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  value: 'delete',
+                  child: const Row(
+                    children: [
+                      Icon(Icons.delete, color: Colors.red),
+                      SizedBox(width: 8),
+                      Text('Delete', style: TextStyle(color: Colors.red)),
+                    ],
+                  ),
+                ),
+              ],
+              onSelected: (value) {
+                switch (value) {
+                  case 'edit':
+                    Navigator.pushNamed(context, '/editBlog');
+                    break;
+                  case 'delete':
+                    // handle logout
+                    break;
+                }
+              },
+              child: Icon(Icons.more_vert, color: Colors.white),
+            ),
           ),
         ],
       ),

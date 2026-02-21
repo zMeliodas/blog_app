@@ -174,7 +174,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       },
                       child: RichText(
                         text: TextSpan(
-                          text: 'Sign up',
+                          text: 'Sign in',
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             color: Colors.blue,
