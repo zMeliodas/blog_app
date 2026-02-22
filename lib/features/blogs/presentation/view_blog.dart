@@ -83,11 +83,14 @@ class _ViewBlogPageState extends State<ViewBlogPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                width: double.infinity, // 👈 full width
-                height: 220,
-                child: Image.network(
-                  'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
-                  fit: BoxFit.fill,
+                width: double.infinity,
+                child: AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: Image.network(
+                    'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
+                    width: double.infinity,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
 
